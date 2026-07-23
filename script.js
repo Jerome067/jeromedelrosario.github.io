@@ -125,6 +125,14 @@ function populatePortfolio() {
         `;
         involvementContainer.appendChild(invCard);
     });
+
+    // Contact Section
+    document.getElementById('contactEmail').textContent = portfolioData.personal.email;
+    document.getElementById('contactPhone').textContent = portfolioData.personal.phone;
+    document.getElementById('contactLocation').textContent = portfolioData.personal.location;
+    const linkedinLink = document.getElementById('contactLinkedin');
+    linkedinLink.textContent = portfolioData.personal.github.replace('github.com/', 'linkedin.com/in/');
+    linkedinLink.href = 'https://linkedin.com/in/lenjmagsino';
 }
 
 // Dark Mode Toggle
