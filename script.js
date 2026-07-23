@@ -24,12 +24,26 @@ function populatePortfolio() {
     // Skills Section
     const skillsContainer = document.getElementById('skillsContainer');
     skillsContainer.innerHTML = '';
-    portfolioData.skills.forEach(skill => {
+    
+    // Group skills by category
+    const skillsByCategory = {};
+    portfolioData.skills.forEach(skillItem => {
+        if (!skillsByCategory[skillItem.category]) {
+            skillsByCategory[skillItem.category] = [];
+        }
+        skillsByCategory[skillItem.category].push(skillItem.skill);
+    });
+
+    // Create skill cards for each category
+    Object.keys(skillsByCategory).forEach(category => {
         const skillCard = document.createElement('div');
         skillCard.className = 'skill-card';
+        const skillsList = skillsByCategory[category].map(skill => `<div class="skill-item">${skill}</div>`).join('');
         skillCard.innerHTML = `
-            <h3>${skill.category}</h3>
-            <p>${skill.items}</p>
+            <h3>${category}</h3>
+            <div class="skills-list">
+                ${skillsList}
+            </div>
         `;
         skillsContainer.appendChild(skillCard);
     });
