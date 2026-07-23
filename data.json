@@ -18,23 +18,51 @@
   "skills": [
     {
       "category": "Frontend",
-      "items": "HTML / CSS / JavaScript, React.js, Figma, Balsamiq"
+      "items": [
+        "HTML / CSS / JavaScript",
+        "React.js",
+        "Figma",
+        "Balsamiq"
+      ]
     },
     {
       "category": "Backend",
-      "items": "Python (Certified), MySQL, SQLite"
+      "items": [
+        "Python (Certified)",
+        "MySQL",
+        "SQLite"
+      ]
     },
     {
       "category": "Programming Languages",
-      "items": "Java, Kotlin, Python, C, C++, C#"
+      "items": [
+        "Java",
+        "Kotlin",
+        "Python",
+        "C",
+        "C++",
+        "C#"
+      ]
     },
     {
       "category": "Tools & IDEs",
-      "items": "VS Code, NetBeans, Dev C++, Android Studio, Git/GitHub, Linux/CLI"
+      "items": [
+        "VS Code",
+        "NetBeans",
+        "Dev C++",
+        "Android Studio",
+        "Git/GitHub",
+        "Linux/CLI"
+      ]
     },
     {
       "category": "Design & Office",
-      "items": "Microsoft Office Suite, Adobe Photoshop, Oracle VirtualBox, Cisco Packet Tracker"
+      "items": [
+        "Microsoft Office Suite",
+        "Adobe Photoshop",
+        "Oracle VirtualBox",
+        "Cisco Packet Tracker"
+      ]
     }
   ],
 
