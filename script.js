@@ -91,6 +91,40 @@ function populatePortfolio() {
         projectsContainer.appendChild(projectCard);
     });
 
+    // Mini Projects Section
+    const miniProjectsContainer = document.getElementById('miniProjectsContainer');
+    miniProjectsContainer.innerHTML = '';
+    portfolioData.miniProjects.forEach((miniProject, index) => {
+        const miniCard = document.createElement('div');
+        miniCard.className = 'mini-project-card';
+        miniCard.innerHTML = `
+            <div class="mini-project-header" onclick="toggleMiniProject(${index})">
+                <span class="mini-project-emoji">${miniProject.emoji}</span>
+                <h3>${miniProject.title}</h3>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="mini-project-content hidden" id="mini-project-${index}">
+                <p class="mini-project-description">${miniProject.description}</p>
+                <div class="variations">
+                    <h4>Variations:</h4>
+                    <div class="variations-list">
+                        ${miniProject.variations.map((v, vIndex) => `
+                            <div class="variation-item" onclick="toggleVariation(${index}, ${vIndex}, event)">
+                                <span class="variation-name">${v.language}</span>
+                                <span class="variation-arrow">→</span>
+                                <div class="variation-expanded hidden" id="variation-${index}-${vIndex}">
+                                    <a href="${v.link}" target="_blank" class="open-btn">Open</a>
+                                </div>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+            </div>
+        `;
+        miniProjectsContainer.appendChild(miniCard);
+    });
+}
+
     // Certificates Section
     const certificatesContainer = document.getElementById('certificatesContainer');
     certificatesContainer.innerHTML = '';
@@ -179,4 +213,22 @@ function handleSubmit(event) {
     
     // Reset form
     event.target.reset();
+}
+
+// Mini Projects Toggle Functions
+function toggleMiniProject(index) {
+    const content = document.getElementById(`mini-project-${index}`);
+    const icon = event.target.closest('.mini-project-header').querySelector('.toggle-icon');
+    
+    content.classList.toggle('hidden');
+    icon.classList.toggle('open');
+}
+
+function toggleVariation(projectIndex, variationIndex, event) {
+    event.stopPropagation();
+    const expanded = document.getElementById(`variation-${projectIndex}-${variationIndex}`);
+    const arrow = event.currentTarget.querySelector('.variation-arrow');
+    
+    expanded.classList.toggle('hidden');
+    arrow.classList.toggle('open');
 }
