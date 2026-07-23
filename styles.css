@@ -205,21 +205,33 @@ body.dark-mode .skill-card {
     font-size: 0.95rem;
 }
 
-.skills-list {
-    text-align: left;
+/* Soft Skills Section */
+.soft-skills-container {
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
 }
 
-.skill-item {
+.soft-skill-card {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
     font-size: 0.95rem;
-    padding: 0.4rem 0;
-    border-bottom: 1px solid rgba(155,125,214,0.2);
+    transition: all 0.3s;
+    cursor: default;
 }
 
-.skill-item:last-child {
-    border-bottom: none;
+body.dark-mode .soft-skill-card {
+    background-color: var(--primary-dark);
+}
+
+.soft-skill-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(155,125,214,0.3);
 }
 
 /* Education Section */
