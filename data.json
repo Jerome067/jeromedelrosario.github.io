@@ -113,6 +113,28 @@
     }
   ],
 
+  "miniProjects": [
+    {
+      "title": "Simple Calculator",
+      "emoji": "🧮",
+      "description": "A basic calculator application demonstrating core programming concepts and arithmetic operations across multiple programming languages.",
+      "variations": [
+        {
+          "language": "Python",
+          "link": "calculator-python.html"
+        },
+        {
+          "language": "Java",
+          "link": "calculator-java.html"
+        },
+        {
+          "language": "C++",
+          "link": "calculator-cpp.html"
+        }
+      ]
+    }
+  ],
+
   "certificates": [
     {
       "title": "Your Certificate Title",
