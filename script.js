@@ -1,3 +1,89 @@
+// Load data from JSON file
+let portfolioData = {};
+
+fetch('data.json')
+    .then(response => response.json())
+    .then(data => {
+        portfolioData = data;
+        populatePortfolio();
+    })
+    .catch(error => console.error('Error loading data:', error));
+
+// Populate Portfolio with Data
+function populatePortfolio() {
+    // Hero Section
+    document.getElementById('heroName').textContent = portfolioData.personal.name;
+    document.getElementById('heroTitle').textContent = portfolioData.personal.title;
+    document.getElementById('heroSubtitle').textContent = portfolioData.personal.subtitle;
+
+    // About Section
+    document.getElementById('aboutTitle').textContent = portfolioData.about.title;
+    document.getElementById('aboutDescription').textContent = portfolioData.about.description;
+    document.getElementById('aboutExtra').textContent = portfolioData.about.extra;
+
+    // Skills Section
+    const skillsContainer = document.getElementById('skillsContainer');
+    skillsContainer.innerHTML = '';
+    portfolioData.skills.forEach(skill => {
+        const skillCard = document.createElement('div');
+        skillCard.className = 'skill-card';
+        skillCard.innerHTML = `
+            <h3>${skill.category}</h3>
+            <p>${skill.items}</p>
+        `;
+        skillsContainer.appendChild(skillCard);
+    });
+
+    // Education Section
+    const educationContainer = document.getElementById('educationContainer');
+    educationContainer.innerHTML = '';
+    portfolioData.education.forEach(edu => {
+        const eduCard = document.createElement('div');
+        eduCard.className = 'education-card';
+        eduCard.innerHTML = `
+            <h3>${edu.degree}</h3>
+            <p class="school-name">${edu.school}</p>
+            <p class="program">${edu.program}</p>
+            <p class="year">${edu.year}</p>
+        `;
+        educationContainer.appendChild(eduCard);
+    });
+
+    // Projects Section
+    const projectsContainer = document.getElementById('projectsContainer');
+    projectsContainer.innerHTML = '';
+    portfolioData.projects.forEach(project => {
+        const projectCard = document.createElement('div');
+        projectCard.className = 'project-card';
+        const tagsHTML = project.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+        projectCard.innerHTML = `
+            <div class="project-image">${project.emoji}</div>
+            <div class="project-content">
+                <h3>${project.title}</h3>
+                <p>${project.description}</p>
+                <div class="project-tags">
+                    ${tagsHTML}
+                </div>
+            </div>
+        `;
+        projectsContainer.appendChild(projectCard);
+    });
+
+    // Certificates Section
+    const certificatesContainer = document.getElementById('certificatesContainer');
+    certificatesContainer.innerHTML = '';
+    portfolioData.certificates.forEach(cert => {
+        const certCard = document.createElement('div');
+        certCard.className = 'certificate-card';
+        certCard.innerHTML = `
+            <h3>🏆 ${cert.title}</h3>
+            <p>${cert.provider}</p>
+            <p class="cert-date">${cert.status}</p>
+        `;
+        certificatesContainer.appendChild(certCard);
+    });
+}
+
 // Dark Mode Toggle
 function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
