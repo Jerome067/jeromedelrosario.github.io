@@ -205,7 +205,27 @@ body.dark-mode .skill-card {
     font-size: 0.95rem;
 }
 
-/* Soft Skills Section */
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    text-align: left;
+}
+
+.skill-item {
+    font-size: 0.95rem;
+    padding: 0.6rem 0;
+    color: var(--text-dark);
+    border-bottom: 1px solid rgba(155,125,214,0.15);
+}
+
+body.dark-mode .skill-item {
+    color: var(--text-light);
+}
+
+.skill-item:last-child {
+    border-bottom: none;
+}
 .soft-skills-container {
     display: flex;
     flex-wrap: wrap;
