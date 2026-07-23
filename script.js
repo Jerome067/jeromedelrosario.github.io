@@ -61,6 +61,12 @@ function populatePortfolio() {
             <p class="school-name">${edu.school}</p>
             <p class="program">${edu.program}</p>
             <p class="year">${edu.year}</p>
+            <div class="education-hover">
+                <div class="hover-content">
+                    <h4>${edu.school}</h4>
+                    <p>${edu.description}</p>
+                </div>
+            </div>
         `;
         educationContainer.appendChild(eduCard);
     });
