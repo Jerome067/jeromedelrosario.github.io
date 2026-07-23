@@ -92,13 +92,15 @@
       "degree": "Senior High School",
       "school": "St. John the Baptist Catholic School",
       "program": "Accountancy, Business, and Management (ABM)",
-      "year": "2021 — 2023"
+      "year": "2021 — 2023",
+      "description": "Graduated with honors in Accountancy, Business, and Management. Developed strong foundational skills in business principles and laid groundwork for future academic pursuits in technology."
     },
     {
       "degree": "Bachelor's Degree",
       "school": "FEU Institute of Technology",
       "program": "BS in Computer Science - Software Engineering",
-      "year": "2023 — Present"
+      "year": "2023 — Present",
+      "description": "Currently pursuing BS in Computer Science with specialization in Software Engineering. Dedicated to mastering full-stack development and building innovative solutions that make a difference."
     }
   ],
 
