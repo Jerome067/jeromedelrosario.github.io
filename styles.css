@@ -401,6 +401,82 @@ body.dark-mode .form-group textarea {
     min-height: 150px;
 }
 
+/* Languages Section */
+.languages-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.language-card {
+    background-color: var(--card-bg-light);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+body.dark-mode .language-card {
+    background-color: var(--card-bg-dark);
+}
+
+.language-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255,107,107,0.2);
+}
+
+.language-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.language-card .proficiency {
+    font-size: 0.95rem;
+    color: #888;
+}
+
+/* Involvement Section */
+.involvement-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.involvement-card {
+    background-color: var(--card-bg-light);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    margin-bottom: 2rem;
+    transition: all 0.3s;
+}
+
+body.dark-mode .involvement-card {
+    background-color: var(--card-bg-dark);
+}
+
+.involvement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255,107,107,0.2);
+}
+
+.involvement-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.involvement-card .organization {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+}
+
+.involvement-card .year {
+    font-size: 0.9rem;
+    color: #888;
+    font-style: italic;
+}
+
 /* Footer */
 footer {
     background-color: var(--card-bg-light);
