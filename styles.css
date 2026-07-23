@@ -269,6 +269,7 @@ body.dark-mode .soft-skill-card {
     border-radius: 8px;
     border-left: 4px solid var(--primary-color);
     transition: all 0.3s;
+    position: relative;
 }
 
 body.dark-mode .education-card {
@@ -278,6 +279,13 @@ body.dark-mode .education-card {
 .education-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(155,125,214,0.2);
+}
+
+.education-card:hover h3,
+.education-card:hover .school-name,
+.education-card:hover .program,
+.education-card:hover .year {
+    opacity: 0.3;
 }
 
 .education-card h3 {
@@ -304,6 +312,45 @@ body.dark-mode .education-card .program {
     font-size: 0.9rem;
     color: #888;
     font-style: italic;
+}
+
+.education-hover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(45, 45, 61, 0.95);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    width: 90%;
+    max-width: 400px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(155, 125, 214, 0.3);
+}
+
+body.dark-mode .education-hover {
+    background-color: rgba(26, 26, 26, 0.95);
+}
+
+.education-card:hover .education-hover {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.hover-content h4 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.hover-content p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-light);
 }
 
 /* Projects Section */
