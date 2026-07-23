@@ -59,55 +59,18 @@
 
   "projects": [
     {
-      "title": "Red Warriors Advanced Ordering System & Point of Sales",
+      "title": "Your Project Title Here",
       "emoji": "💻",
-      "description": "Full stack developer for the University of the East canteen. Created a mobile solution and backend system enabling advance student orders, real-time sales tracking, inventory management, and secure authentication.",
-      "tags": ["Java", "Firebase", "Android"]
-    },
-    {
-      "title": "Heal App",
-      "emoji": "🏥",
-      "description": "OCR-driven prescription management application. Developed both mobile frontend and intelligent backend with medication scheduling and drug interaction analysis systems.",
-      "tags": ["Flutter", "Firebase", "OCR"]
-    },
-    {
-      "title": "GengGengPy",
-      "emoji": "🚀",
-      "description": "Programming language interpreter using Filipino street slang keywords. Designed language syntax, built the interpreter engine in Python, and created supporting tools to democratize programming through local culture.",
-      "tags": ["Python", "Interpreter", "Language Design"]
+      "description": "Add your project description here.",
+      "tags": ["Tag1", "Tag2", "Tag3"]
     }
   ],
 
   "certificates": [
     {
-      "title": "Android Development with Kotlin",
-      "provider": "LinkedIn Learning",
-      "status": "Completed & Verified"
-    },
-    {
-      "title": "Postman Essential Training",
-      "provider": "LinkedIn Learning",
-      "status": "Completed & Verified"
-    },
-    {
-      "title": "APIs and Web Services",
-      "provider": "LinkedIn Learning",
-      "status": "Completed & Verified"
-    },
-    {
-      "title": "Python Certification",
-      "provider": "Certiport",
-      "status": "Completed & Verified"
-    },
-    {
-      "title": "Project Management Ready",
-      "provider": "Certiport",
-      "status": "Completed & Verified"
-    },
-    {
-      "title": "MATLAB Onramp",
-      "provider": "MathWorks",
-      "status": "Completed & Verified"
+      "title": "Your Certificate Title",
+      "provider": "Certificate Provider",
+      "status": "Status"
     }
   ],
 
