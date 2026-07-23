@@ -171,8 +171,8 @@ function populatePortfolio() {
     document.getElementById('contactPhone').textContent = portfolioData.personal.phone;
     document.getElementById('contactLocation').textContent = portfolioData.personal.location;
     const linkedinLink = document.getElementById('contactLinkedin');
-    linkedinLink.textContent = portfolioData.personal.github.replace('github.com/', 'linkedin.com/in/');
-    linkedinLink.href = 'https://linkedin.com/in/lenjmagsino';
+    linkedinLink.textContent = 'linkedin.com/in/jeromedelrosario';
+    linkedinLink.href = 'https://www.linkedin.com/in/jeromedelrosario/';
 }
 
 // Dark Mode Toggle
