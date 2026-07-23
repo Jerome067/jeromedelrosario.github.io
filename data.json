@@ -1,0 +1,104 @@
+{
+  "personal": {
+    "name": "Jerome M. Del Rosario",
+    "title": "Full Stack Developer",
+    "subtitle": "Creative Problem Solver",
+    "email": "your-email@example.com",
+    "phone": "+63 962 281 2253",
+    "location": "Valenzuela City, Metro Manila, PH"
+  },
+  
+  "about": {
+    "title": "About Me",
+    "description": "I'm a passionate developer who loves creating beautiful and functional websites. With expertise in modern web technologies, I help businesses and individuals bring their ideas to life through clean code and thoughtful design.",
+    "extra": "When I'm not coding, you can find me exploring new technologies, learning new skills, or contributing to open-source projects."
+  },
+
+  "skills": [
+    {
+      "category": "Frontend",
+      "items": "HTML, CSS, JavaScript, React, Vue"
+    },
+    {
+      "category": "Backend",
+      "items": "Python, Node.js, Firebase, MySQL"
+    },
+    {
+      "category": "Tools",
+      "items": "Git, GitHub, VS Code, Figma"
+    },
+    {
+      "category": "Soft Skills",
+      "items": "Problem Solving, Team Work, Communication"
+    }
+  ],
+
+  "education": [
+    {
+      "degree": "Senior High School",
+      "school": "University of the East - Caloocan",
+      "program": "Information and Communications Technology",
+      "year": "2021 — 2023"
+    },
+    {
+      "degree": "Bachelor's Degree",
+      "school": "FEU Institute of Technology",
+      "program": "BS in Computer Science - Software Engineering",
+      "year": "2023 — Present"
+    }
+  ],
+
+  "projects": [
+    {
+      "title": "Red Warriors Ordering System",
+      "emoji": "💻",
+      "description": "Mobile and backend solution for the University of the East canteen, enabling advance student orders, real-time sales tracking, and inventory management.",
+      "tags": ["Java", "Firebase", "Android"]
+    },
+    {
+      "title": "Heal App",
+      "emoji": "🏥",
+      "description": "An OCR-driven prescription management application with mobile frontend and intelligent backend for medication scheduling.",
+      "tags": ["Flutter", "Firebase", "OCR"]
+    },
+    {
+      "title": "GengGengPy",
+      "emoji": "🎨",
+      "description": "A programming language interpreter that uses Filipino street slang keywords to make coding accessible and culturally relevant.",
+      "tags": ["Python", "Interpreter"]
+    }
+  ],
+
+  "certificates": [
+    {
+      "title": "Android Development with Kotlin",
+      "provider": "LinkedIn Learning",
+      "status": "Completed & Verified"
+    },
+    {
+      "title": "Postman Essential Training",
+      "provider": "LinkedIn Learning",
+      "status": "Completed & Verified"
+    },
+    {
+      "title": "APIs and Web Services",
+      "provider": "LinkedIn Learning",
+      "status": "Completed & Verified"
+    },
+    {
+      "title": "Python Certification",
+      "provider": "Certiport",
+      "status": "Completed & Verified"
+    },
+    {
+      "title": "Project Management Ready",
+      "provider": "Certiport",
+      "status": "Completed & Verified"
+    },
+    {
+      "title": "MATLAB Onramp",
+      "provider": "MathWorks",
+      "status": "Completed & Verified"
+    }
+  ]
+}
