@@ -1,43 +1,52 @@
 {
   "personal": {
     "name": "Jerome M. Del Rosario",
-    "title": "Full Stack Developer",
-    "subtitle": "Creative Problem Solver",
-    "email": "your-email@example.com",
-    "phone": "+63 962 281 2253",
-    "location": "Valenzuela City, Metro Manila, PH"
+    "title": "Software Engineer",
+    "subtitle": "Full Stack Developer | Platform Engineer",
+    "email": "delrosariomrj@gmail.com",
+    "phone": "+63 976 302 8338",
+    "location": "San Juan City, Metro Manila, Philippines, 1500",
+    "github": "https://github.com/Jerome067"
   },
   
   "about": {
     "title": "About Me",
-    "description": "I'm a passionate developer who loves creating beautiful and functional websites. With expertise in modern web technologies, I help businesses and individuals bring their ideas to life through clean code and thoughtful design.",
-    "extra": "When I'm not coding, you can find me exploring new technologies, learning new skills, or contributing to open-source projects."
+    "description": "Dedicated and curious Computer Science student with a solid foundation in software development, programming languages, and computing principles. Experienced in building small-scale applications, working in both academic and personal project settings. Passionate about problem-solving, continuous learning, and contributing to real-world tech solutions.",
+    "extra": "I'm currently pursuing my degree at FEU Institute of Technology and actively expanding my backend development skills. Always eager to learn, solve problems, and build real-world tech solutions."
   },
 
   "skills": [
     {
       "category": "Frontend",
-      "items": "HTML, CSS, JavaScript, React, Vue"
+      "items": "HTML, CSS, JavaScript, React, Figma, Balsamiq"
     },
     {
       "category": "Backend",
-      "items": "Python, Node.js, Firebase, MySQL"
+      "items": "Python (Certified), MySQL, SQLite"
     },
     {
-      "category": "Tools",
-      "items": "Git, GitHub, VS Code, Figma"
+      "category": "Programming Languages",
+      "items": "Java (Frontend & OOP), Python (Backend & Algorithms), Kotlin (Android), C, C++, C#"
+    },
+    {
+      "category": "Tools & IDEs",
+      "items": "VS Code, NetBeans, Dev C++, Android Studio, Git/GitHub, Linux/CLI"
+    },
+    {
+      "category": "Design & Office",
+      "items": "Microsoft Office Suite, Adobe Photoshop, Oracle VirtualBox"
     },
     {
       "category": "Soft Skills",
-      "items": "Problem Solving, Team Work, Communication"
+      "items": "Problem Solving, Critical Thinking, Communication, Team Work/Collaboration, Leadership, Willing to Learn"
     }
   ],
 
   "education": [
     {
       "degree": "Senior High School",
-      "school": "University of the East - Caloocan",
-      "program": "Information and Communications Technology",
+      "school": "St. John the Baptist Catholic School",
+      "program": "Accountancy, Business, and Management (ABM)",
       "year": "2021 — 2023"
     },
     {
@@ -50,22 +59,22 @@
 
   "projects": [
     {
-      "title": "Red Warriors Ordering System",
+      "title": "Red Warriors Advanced Ordering System & Point of Sales",
       "emoji": "💻",
-      "description": "Mobile and backend solution for the University of the East canteen, enabling advance student orders, real-time sales tracking, and inventory management.",
+      "description": "Full stack developer for the University of the East canteen. Created a mobile solution and backend system enabling advance student orders, real-time sales tracking, inventory management, and secure authentication.",
       "tags": ["Java", "Firebase", "Android"]
     },
     {
       "title": "Heal App",
       "emoji": "🏥",
-      "description": "An OCR-driven prescription management application with mobile frontend and intelligent backend for medication scheduling.",
+      "description": "OCR-driven prescription management application. Developed both mobile frontend and intelligent backend with medication scheduling and drug interaction analysis systems.",
       "tags": ["Flutter", "Firebase", "OCR"]
     },
     {
       "title": "GengGengPy",
-      "emoji": "🎨",
-      "description": "A programming language interpreter that uses Filipino street slang keywords to make coding accessible and culturally relevant.",
-      "tags": ["Python", "Interpreter"]
+      "emoji": "🚀",
+      "description": "Programming language interpreter using Filipino street slang keywords. Designed language syntax, built the interpreter engine in Python, and created supporting tools to democratize programming through local culture.",
+      "tags": ["Python", "Interpreter", "Language Design"]
     }
   ],
 
@@ -99,6 +108,29 @@
       "title": "MATLAB Onramp",
       "provider": "MathWorks",
       "status": "Completed & Verified"
+    }
+  ],
+
+  "languages": [
+    {
+      "language": "Filipino",
+      "proficiency": "Native"
+    },
+    {
+      "language": "English",
+      "proficiency": "Fluent"
+    },
+    {
+      "language": "Mandarin",
+      "proficiency": "Basic"
+    }
+  ],
+
+  "involvement": [
+    {
+      "position": "Member",
+      "organization": "Association for Computing Machinery",
+      "year": "2023 — 2025"
     }
   ]
 }
