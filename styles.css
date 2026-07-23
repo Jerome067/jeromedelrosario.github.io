@@ -5,12 +5,13 @@
 }
 
 :root {
-    --primary-color: #ff6b6b;
+    --primary-color: #9b7dd6;
+    --primary-dark: #6d4a9e;
     --bg-dark: #1a1a1a;
     --bg-light: #ffffff;
     --text-dark: #333;
     --text-light: #f0f0f0;
-    --card-bg-dark: #2d2d2d;
+    --card-bg-dark: #2d2d3d;
     --card-bg-light: #f9f9f9;
 }
 
@@ -91,7 +92,7 @@ body.dark-mode .nav-links a {
     justify-content: center;
     text-align: center;
     padding: 2rem 5%;
-    background: linear-gradient(135deg, rgba(255,107,107,0.1) 0%, rgba(255,107,107,0.05) 100%);
+    background: linear-gradient(135deg, rgba(155,125,214,0.1) 0%, rgba(155,125,214,0.05) 100%);
 }
 
 .hero-content h1 {
@@ -135,7 +136,7 @@ body.dark-mode .hero-content p {
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(255,107,107,0.3);
+    box-shadow: 0 10px 20px rgba(155,125,214,0.3);
 }
 
 .btn-secondary {
@@ -192,7 +193,7 @@ body.dark-mode .skill-card {
 
 .skill-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(255,107,107,0.2);
+    box-shadow: 0 10px 25px rgba(155,125,214,0.2);
 }
 
 .skill-card h3 {
@@ -202,6 +203,23 @@ body.dark-mode .skill-card {
 
 .skill-card p {
     font-size: 0.95rem;
+}
+
+.skills-list {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.skill-item {
+    font-size: 0.95rem;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid rgba(155,125,214,0.2);
+}
+
+.skill-item:last-child {
+    border-bottom: none;
 }
 
 /* Education Section */
@@ -227,7 +245,7 @@ body.dark-mode .education-card {
 
 .education-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(255,107,107,0.2);
+    box-shadow: 0 10px 25px rgba(155,125,214,0.2);
 }
 
 .education-card h3 {
@@ -285,7 +303,7 @@ body.dark-mode .project-card {
 .project-image {
     width: 100%;
     height: 200px;
-    background: linear-gradient(135deg, var(--primary-color), #ff9999);
+    background: linear-gradient(135deg, var(--primary-color), #b89dd8);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -341,7 +359,7 @@ body.dark-mode .certificate-card {
 
 .certificate-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(255,107,107,0.2);
+    box-shadow: 0 10px 25px rgba(155,125,214,0.2);
 }
 
 .certificate-card h3 {
@@ -424,7 +442,7 @@ body.dark-mode .language-card {
 
 .language-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(255,107,107,0.2);
+    box-shadow: 0 10px 25px rgba(155,125,214,0.2);
 }
 
 .language-card h3 {
@@ -458,7 +476,7 @@ body.dark-mode .involvement-card {
 
 .involvement-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(255,107,107,0.2);
+    box-shadow: 0 10px 25px rgba(155,125,214,0.2);
 }
 
 .involvement-card h3 {
