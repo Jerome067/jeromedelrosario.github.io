@@ -24,13 +24,17 @@ function populatePortfolio() {
     // Skills Section
     const skillsContainer = document.getElementById('skillsContainer');
     skillsContainer.innerHTML = '';
-    portfolioData.skills.forEach(skill => {
+    portfolioData.skills.forEach(skillCategory => {
         const skillCard = document.createElement('div');
         skillCard.className = 'skill-card';
-        skillCard.innerHTML = `
-            <h3>${skill.category}</h3>
-            <p>${skill.items}</p>
-        `;
+        
+        let skillsHTML = `<h3>${skillCategory.category}</h3><div class="skills-list">`;
+        skillCategory.items.forEach(item => {
+            skillsHTML += `<div class="skill-item">${item}</div>`;
+        });
+        skillsHTML += `</div>`;
+        
+        skillCard.innerHTML = skillsHTML;
         skillsContainer.appendChild(skillCard);
     });
 
