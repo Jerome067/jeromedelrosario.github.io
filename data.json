@@ -18,27 +18,119 @@
   "skills": [
     {
       "category": "Frontend",
-      "items": "HTML, CSS, JavaScript, React, Figma, Balsamiq"
+      "skill": "HTML / CSS / JavaScript"
+    },
+    {
+      "category": "Frontend",
+      "skill": "React.js"
+    },
+    {
+      "category": "Frontend",
+      "skill": "Figma"
+    },
+    {
+      "category": "Frontend",
+      "skill": "Balsamiq"
     },
     {
       "category": "Backend",
-      "items": "Python (Certified), MySQL, SQLite"
+      "skill": "Python (Certified)"
     },
     {
-      "category": "Programming Languages",
-      "items": "Java (Frontend & OOP), Python (Backend & Algorithms), Kotlin (Android), C, C++, C#"
+      "category": "Backend",
+      "skill": "MySQL"
     },
     {
-      "category": "Tools & IDEs",
-      "items": "VS Code, NetBeans, Dev C++, Android Studio, Git/GitHub, Linux/CLI"
+      "category": "Backend",
+      "skill": "SQLite"
     },
     {
-      "category": "Design & Office",
-      "items": "Microsoft Office Suite, Adobe Photoshop, Oracle VirtualBox"
+      "category": "Languages",
+      "skill": "Java"
     },
     {
-      "category": "Soft Skills",
-      "items": "Problem Solving, Critical Thinking, Communication, Team Work/Collaboration, Leadership, Willing to Learn"
+      "category": "Languages",
+      "skill": "Kotlin"
+    },
+    {
+      "category": "Languages",
+      "skill": "Python"
+    },
+    {
+      "category": "Languages",
+      "skill": "C / C++ / C#"
+    },
+    {
+      "category": "IDEs & Tools",
+      "skill": "VS Code"
+    },
+    {
+      "category": "IDEs & Tools",
+      "skill": "NetBeans"
+    },
+    {
+      "category": "IDEs & Tools",
+      "skill": "Dev C++"
+    },
+    {
+      "category": "IDEs & Tools",
+      "skill": "Android Studio"
+    },
+    {
+      "category": "Tools & Others",
+      "skill": "Git / GitHub"
+    },
+    {
+      "category": "Tools & Others",
+      "skill": "Linux / CLI"
+    },
+    {
+      "category": "Tools & Others",
+      "skill": "Agile / Scrum"
+    },
+    {
+      "category": "Tools & Others",
+      "skill": "Problem Solving"
+    },
+    {
+      "category": "Tools & Others",
+      "skill": "Cisco Packet Tracker"
+    },
+    {
+      "category": "Tools & Others",
+      "skill": "MS Word"
+    },
+    {
+      "category": "Tools & Others",
+      "skill": "Google Docs"
+    },
+    {
+      "category": "Tools & Others",
+      "skill": "Excel"
+    },
+    {
+      "category": "Tools & Others",
+      "skill": "Google Sheets"
+    },
+    {
+      "category": "Tools & Others",
+      "skill": "PowerPoint"
+    },
+    {
+      "category": "Tools & Others",
+      "skill": "Adobe Photoshop"
+    },
+    {
+      "category": "Tools & Others",
+      "skill": "Oracle VirtualBox"
+    },
+    {
+      "category": "Tools & Others",
+      "skill": "Cisco DevASC"
+    },
+    {
+      "category": "Tools & Others",
+      "skill": "Ubuntu VMs"
     }
   ],
 
