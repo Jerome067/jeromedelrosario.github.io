@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator - Java</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            color: #9b7dd6;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            color: #aaa;
+            font-size: 1.1rem;
+        }
+
+        .code-section {
+            background-color: #0f3460;
+            border: 2px solid #9b7dd6;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            overflow-x: auto;
+        }
+
+        .code-section h2 {
+            color: #9b7dd6;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        pre {
+            background-color: #1a1a1a;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            border-left: 4px solid #9b7dd6;
+        }
+
+        code {
+            color: #e0e0e0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .keyword { color: #ff79c6; }
+        .string { color: #f1fa8c; }
+        .function { color: #8be9fd; }
+        .comment { color: #6272a4; }
+
+        .actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            flex: 1;
+            min-width: 200px;
+            padding: 1rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background-color: #9b7dd6;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #b39dd6;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: #6d4a9e;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: #7d5aae;
+            transform: translateY(-2px);
+        }
+
+        .info {
+            background-color: rgba(155, 125, 214, 0.1);
+            border-left: 4px solid #9b7dd6;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .info h3 {
+            color: #9b7dd6;
+            margin-bottom: 0.5rem;
+        }
+
+        .info p {
+            color: #aaa;
+            line-height: 1.6;
+        }
+
+        .back-link {
+            color: #9b7dd6;
+            text-decoration: none;
+            margin-bottom: 2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="javascript:history.back()" class="back-link">← Back to Portfolio</a>
+
+        <div class="header">
+            <h1>☕ Calculator - Java</h1>
+            <p>A simple calculator implementation in Java</p>
+        </div>
+
+        <div class="info">
+            <h3>About this Implementation</h3>
+            <p>This is a command-line calculator written in Java that demonstrates object-oriented programming principles. It performs basic arithmetic operations with proper error handling and user input validation.</p>
+        </div>
+
+        <div class="code-section">
+            <h2>Source Code</h2>
+            <pre><code><span class="keyword">import</span> java.util.Scanner;
+
+<span class="keyword">public class</span> <span class="function">Calculator</span> {
+    
+    <span class="keyword">public static double</span> <span class="function">add</span>(<span class="keyword">double</span> a, <span class="keyword">double</span> b) {
+        <span class="keyword">return</span> a + b;
+    }
+    
+    <span class="keyword">public static double</span> <span class="function">subtract</span>(<span class="keyword">double</span> a, <span class="keyword">double</span> b) {
+        <span class="keyword">return</span> a - b;
+    }
+    
+    <span class="keyword">public static double</span> <span class="function">multiply</span>(<span class="keyword">double</span> a, <span class="keyword">double</span> b) {
+        <span class="keyword">return</span> a * b;
+    }
+    
+    <span class="keyword">public static double</span> <span class="function">divide</span>(<span class="keyword">double</span> a, <span class="keyword">double</span> b) {
+        <span class="keyword">if</span> (b == 0) {
+            System.out.println(<span class="string">"Error: Division by zero"</span>);
+            <span class="keyword">return</span> 0;
+        }
+        <span class="keyword">return</span> a / b;
+    }
+    
+    <span class="keyword">public static double</span> <span class="function">modulo</span>(<span class="keyword">double</span> a, <span class="keyword">double</span> b) {
+        <span class="keyword">if</span> (b == 0) {
+            System.out.println(<span class="string">"Error: Division by zero"</span>);
+            <span class="keyword">return</span> 0;
+        }
+        <span class="keyword">return</span> a % b;
+    }
+    
+    <span class="keyword">public static void</span> <span class="function">main</span>(String[] args) {
+        Scanner scanner = <span class="keyword">new</span> Scanner(System.in);
+        <span class="keyword">boolean</span> continueCalculating = <span class="keyword">true</span>;
+        
+        System.out.println(<span class="string">"Simple Calculator"</span>);
+        System.out.println(<span class="string">"Operations: +, -, *, /, %"</span>);
+        
+        <span class="keyword">while</span> (continueCalculating) {
+            System.out.print(<span class="string">"Enter first number: "</span>);
+            <span class="keyword">double</span> num1 = scanner.nextDouble();
+            
+            System.out.print(<span class="string">"Enter operation (+, -, *, /, %): "</span>);
+            String operation = scanner.next();
+            
+            System.out.print(<span class="string">"Enter second number: "</span>);
+            <span class="keyword">double</span> num2 = scanner.nextDouble();
+            
+            <span class="keyword">double</span> result = 0;
+            <span class="keyword">boolean</span> validOperation = <span class="keyword">true</span>;
+            
+            <span class="keyword">switch</span>(operation) {
+                <span class="keyword">case</span> <span class="string">"+"</span>:
+                    result = add(num1, num2);
+                    <span class="keyword">break</span>;
+                <span class="keyword">case</span> <span class="string">"-"</span>:
+                    result = subtract(num1, num2);
+                    <span class="keyword">break</span>;
+                <span class="keyword">case</span> <span class="string">"*"</span>:
+                    result = multiply(num1, num2);
+                    <span class="keyword">break</span>;
+                <span class="keyword">case</span> <span class="string">"/"</span>:
+                    result = divide(num1, num2);
+                    <span class="keyword">break</span>;
+                <span class="keyword">case</span> <span class="string">"%"</span>:
+                    result = modulo(num1, num2);
+                    <span class="keyword">break</span>;
+                <span class="keyword">default</span>:
+                    System.out.println(<span class="string">"Invalid operation!"</span>);
+                    validOperation = <span class="keyword">false</span>;
+            }
+            
+            <span class="keyword">if</span> (validOperation) {
+                System.out.println(<span class="string">"Result: "</span> + result);
+            }
+            
+            System.out.print(<span class="string">"Calculate again? (yes/no): "</span>);
+            String response = scanner.next();
+            continueCalculating = response.equalsIgnoreCase(<span class="string">"yes"</span>);
+        }
+        
+        scanner.close();
+        System.out.println(<span class="string">"Thank you for using Calculator!"</span>);
+    }
+}</code></pre>
+        </div>
+
+        <div class="actions">
+            <a href="https://www.onlinegdb.com/online_java_compiler" target="_blank" class="btn btn-primary">
+                🚀 Run on OnlineGDB
+            </a>
+            <a href="https://www.jdoodle.com/online-java-compiler" target="_blank" class="btn btn-secondary">
+                💻 Run on JDoodle
+            </a>
+        </div>
+
+        <div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #9b7dd6; text-align: center; color: #888;">
+            <p>Created by Jerome M. Del Rosario</p>
+        </div>
+    </div>
+</body>
+</html>
