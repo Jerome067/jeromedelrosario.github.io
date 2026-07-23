@@ -24,29 +24,27 @@ function populatePortfolio() {
     // Skills Section
     const skillsContainer = document.getElementById('skillsContainer');
     skillsContainer.innerHTML = '';
-    
-    // Group skills by category
-    const skillsByCategory = {};
-    portfolioData.skills.forEach(skillItem => {
-        if (!skillsByCategory[skillItem.category]) {
-            skillsByCategory[skillItem.category] = [];
-        }
-        skillsByCategory[skillItem.category].push(skillItem.skill);
-    });
-
-    // Create skill cards for each category
-    Object.keys(skillsByCategory).forEach(category => {
+    portfolioData.skills.forEach(skill => {
         const skillCard = document.createElement('div');
         skillCard.className = 'skill-card';
-        const skillsList = skillsByCategory[category].map(skill => `<div class="skill-item">${skill}</div>`).join('');
         skillCard.innerHTML = `
-            <h3>${category}</h3>
-            <div class="skills-list">
-                ${skillsList}
-            </div>
+            <h3>${skill.category}</h3>
+            <p>${skill.items}</p>
         `;
         skillsContainer.appendChild(skillCard);
     });
+
+    // Soft Skills Section
+    const softSkillsContainer = document.getElementById('softSkillsContainer');
+    if (softSkillsContainer && portfolioData.softSkills) {
+        softSkillsContainer.innerHTML = '';
+        portfolioData.softSkills.forEach(skill => {
+            const skillCard = document.createElement('div');
+            skillCard.className = 'soft-skill-card';
+            skillCard.innerHTML = `<span>${skill.title}</span>`;
+            softSkillsContainer.appendChild(skillCard);
+        });
+    }
 
     // Education Section
     const educationContainer = document.getElementById('educationContainer');
