@@ -123,7 +123,6 @@ function populatePortfolio() {
         `;
         miniProjectsContainer.appendChild(miniCard);
     });
-}
 
     // Certificates Section
     const certificatesContainer = document.getElementById('certificatesContainer');
