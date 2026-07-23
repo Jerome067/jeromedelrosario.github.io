@@ -82,6 +82,33 @@ function populatePortfolio() {
         `;
         certificatesContainer.appendChild(certCard);
     });
+
+    // Languages Section
+    const languagesContainer = document.getElementById('languagesContainer');
+    languagesContainer.innerHTML = '';
+    portfolioData.languages.forEach(lang => {
+        const langCard = document.createElement('div');
+        langCard.className = 'language-card';
+        langCard.innerHTML = `
+            <h3>${lang.language}</h3>
+            <p class="proficiency">${lang.proficiency}</p>
+        `;
+        languagesContainer.appendChild(langCard);
+    });
+
+    // Involvement Section
+    const involvementContainer = document.getElementById('involvementContainer');
+    involvementContainer.innerHTML = '';
+    portfolioData.involvement.forEach(inv => {
+        const invCard = document.createElement('div');
+        invCard.className = 'involvement-card';
+        invCard.innerHTML = `
+            <h3>${inv.position}</h3>
+            <p class="organization">${inv.organization}</p>
+            <p class="year">${inv.year}</p>
+        `;
+        involvementContainer.appendChild(invCard);
+    });
 }
 
 // Dark Mode Toggle
