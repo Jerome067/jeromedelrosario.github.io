@@ -125,6 +125,16 @@ function splitName(element) {
     return text.length * 45 + 600;
 }
 
+// Shrink the name until it fits on one line inside the loader card.
+function fitName(element) {
+    element.style.fontSize = '';
+    let size = parseFloat(getComputedStyle(element).fontSize);
+    while (element.scrollWidth > element.clientWidth && size > 12) {
+        size -= 1;
+        element.style.fontSize = `${size}px`;
+    }
+}
+
 async function typeText(element, text, speed) {
     for (const char of text) {
         if (introSkipped) break;
@@ -189,6 +199,8 @@ async function playIntro(short) {
 
     if (!short) {
         const nameDuration = splitName(nameEl);
+        fitName(nameEl);
+        window.addEventListener('resize', () => fitName(nameEl));
         await skippableWait(prefersReducedMotion ? 0 : nameDuration);
 
         // Type each phrase, erasing all but the last

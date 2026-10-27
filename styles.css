@@ -82,7 +82,7 @@ button {
 }
 
 .loader-card {
-    width: min(560px, 100%);
+    width: min(820px, 100%);
     padding: 2.5rem 2rem;
     text-align: center;
     border-radius: 12px;
@@ -90,7 +90,9 @@ button {
 }
 
 .loader-name {
-    font-size: clamp(2rem, 7vw, 3.6rem);
+    font-size: clamp(1.2rem, 6vw, 3.6rem);
+    /* The full name always stays on one line; script.js shrinks it further if needed */
+    white-space: nowrap;
     font-weight: 700;
     line-height: 1.1;
     color: #f3d6ff;
