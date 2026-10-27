@@ -3,178 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Jerome M. Del Rosario — Software Engineer</title>
+    <meta name="description" content="Portfolio of Jerome M. Del Rosario, software engineer and Computer Science student at FEU Institute of Technology.">
+    <meta name="theme-color" content="#0a0614">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">JMD</div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#softSkills">Soft Skills</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#miniProjects">Mini Projects</a></li>
-            <li><a href="#certificates">Certificates</a></li>
-            <li><a href="#languages">Languages</a></li>
-            <li><a href="#involvement">Involvement</a></li>
-            <li><a href="#contact">Contact</a></li>
+<body class="is-loading">
+    <!-- Background: stars, nebulae, shooting stars and orbit rings -->
+    <canvas id="sky" aria-hidden="true"></canvas>
+
+    <!-- Intro / Loading Screen -->
+    <div class="loader" id="loader" role="status" aria-live="polite">
+        <div class="loader-card">
+            <h1 class="loader-name" id="loaderName">Jerome M. Del Rosario</h1>
+            <p class="loader-tagline"><span id="loaderTagline"></span><span class="caret" aria-hidden="true"></span></p>
+            <div class="loader-progress">
+                <p class="loader-status" id="loaderStatus">Initializing constellation…</p>
+                <div class="loader-bar"><div class="loader-bar-fill" id="loaderBar"></div></div>
+                <p class="loader-hint">Press any key or wait a few seconds to continue</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top Bar -->
+    <header class="topbar">
+        <button class="brand" id="brandButton" aria-label="Reset view">JMD</button>
+        <div class="topbar-title">
+            <span id="topName">Jerome M. Del Rosario</span>
+            <span class="topbar-sep">·</span>
+            <span id="topTitle">Software Engineer</span>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="sectionMenu">☰ Sections</button>
+    </header>
+
+    <!-- Section Menu (list fallback for the constellation) -->
+    <nav class="section-menu" id="sectionMenu" aria-label="Sections" hidden>
+        <ul id="sectionMenuList">
+            <!-- Populated by JavaScript -->
         </ul>
-        <button class="theme-toggle" onclick="toggleDarkMode()">🌙</button>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <div class="hero-content">
-            <h1>Hi, I'm <span id="heroName">Jerome M. Del Rosario</span></h1>
-            <p><span id="heroTitle">Full Stack Developer</span> | <span id="heroSubtitle">Creative Problem Solver</span></p>
-            <div class="hero-buttons">
-                <button class="btn btn-primary" onclick="scrollTo('projects')">View My Work</button>
-                <button class="btn btn-secondary" onclick="scrollTo('contact')">Get In Touch</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <h2 id="aboutTitle">About Me</h2>
-        <div class="about-content">
-            <p id="aboutDescription"></p>
-            <p id="aboutExtra" style="margin-top: 1rem;"></p>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-container" id="skillsContainer">
+    <!-- Constellation -->
+    <main class="stage" id="stage" aria-label="Portfolio constellation">
+        <button class="core" id="core" data-section="about" aria-label="About me">
+            <svg class="core-atom" viewBox="0 0 120 120" aria-hidden="true">
+                <defs>
+                    <linearGradient id="coreGradient" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0" stop-color="#ff5fd2"/>
+                        <stop offset="1" stop-color="#8a5cff"/>
+                    </linearGradient>
+                </defs>
+                <g fill="none" stroke="url(#coreGradient)" stroke-width="5" stroke-linecap="round">
+                    <ellipse cx="60" cy="60" rx="52" ry="20" transform="rotate(-30 60 60)"/>
+                    <ellipse cx="60" cy="60" rx="52" ry="20" transform="rotate(30 60 60)"/>
+                    <ellipse cx="60" cy="60" rx="52" ry="20" transform="rotate(90 60 60)"/>
+                </g>
+                <circle cx="104" cy="35" r="5" fill="#ff5fd2"/>
+                <circle cx="16" cy="85" r="4" fill="#8a5cff"/>
+            </svg>
+            <span class="core-label">JMD</span>
+        </button>
+        <div class="planets" id="planets">
             <!-- Populated by JavaScript -->
         </div>
-    </section>
+    </main>
 
-    <!-- Soft Skills Section -->
-    <section id="softSkills">
-        <h2>Soft Skills</h2>
-        <div class="soft-skills-container" id="softSkillsContainer">
+    <p class="hint hint-left">Drag to rotate · Scroll to zoom</p>
+    <p class="hint hint-right">Press <kbd>?</kbd> for constellation controls</p>
+
+    <!-- Controls Help -->
+    <div class="controls" id="controls" role="dialog" aria-modal="false" aria-labelledby="controlsTitle" hidden>
+        <h2 id="controlsTitle">Constellation controls</h2>
+        <dl>
+            <dt>Drag / <kbd>←</kbd> <kbd>→</kbd></dt><dd>Spin the system</dd>
+            <dt>Drag / <kbd>↑</kbd> <kbd>↓</kbd></dt><dd>Tilt the view</dd>
+            <dt>Scroll / <kbd>+</kbd> <kbd>−</kbd></dt><dd>Zoom</dd>
+            <dt><kbd>Space</kbd></dt><dd>Pause or resume orbits</dd>
+            <dt><kbd>0</kbd></dt><dd>Reset the view</dd>
+            <dt><kbd>Tab</kbd> + <kbd>Enter</kbd></dt><dd>Visit a planet</dd>
+            <dt><kbd>Esc</kbd></dt><dd>Close panels</dd>
+        </dl>
+        <button class="controls-close" id="controlsClose">Got it</button>
+    </div>
+
+    <!-- Section Panel -->
+    <aside class="panel" id="panel" aria-labelledby="panelTitle" hidden>
+        <div class="panel-header">
+            <span class="panel-icon" id="panelIcon" aria-hidden="true"></span>
+            <h2 id="panelTitle"></h2>
+            <button class="panel-close" id="panelClose" aria-label="Close">✕</button>
+        </div>
+        <div class="panel-body" id="panelBody">
             <!-- Populated by JavaScript -->
         </div>
-    </section>
+    </aside>
 
-    <!-- Education Section -->
-    <section id="education">
-        <h2>Education</h2>
-        <div class="education-container" id="educationContainer">
-            <!-- Populated by JavaScript -->
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>My Projects</h2>
-        <div class="projects-container" id="projectsContainer">
-            <!-- Populated by JavaScript -->
-        </div>
-    </section>
-
-    <!-- Mini Projects Section -->
-    <section id="miniProjects">
-        <h2>Mini Projects</h2>
-        <div class="mini-projects-container" id="miniProjectsContainer">
-            <!-- Populated by JavaScript -->
-        </div>
-    </section>
-
-    <!-- Certificates Section -->
-    <section id="certificates">
-        <h2>Certificates & Credentials</h2>
-        <div class="certificates-container" id="certificatesContainer">
-            <!-- Populated by JavaScript -->
-        </div>
-    </section>
-
-    <!-- Languages Section -->
-    <section id="languages">
-        <h2>Languages</h2>
-        <div class="languages-container" id="languagesContainer">
-            <!-- Populated by JavaScript -->
-        </div>
-    </section>
-
-    <!-- Involvement Section -->
-    <section id="involvement">
-        <h2>Involvement & Memberships</h2>
-        <div class="involvement-container" id="involvementContainer">
-            <!-- Populated by JavaScript -->
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2><span class="contact-heading">GET IN <span class="highlight">TOUCH</span></span></h2>
-        <div class="contact-wrapper">
-            <!-- Left Side - Contact Info -->
-            <div class="contact-info">
-                <div class="info-card">
-                    <span class="info-icon">✉️</span>
-                    <div class="info-content">
-                        <p class="info-label">EMAIL</p>
-                        <p class="info-text" id="contactEmail"></p>
-                    </div>
-                </div>
-                <div class="info-card">
-                    <span class="info-icon">📞</span>
-                    <div class="info-content">
-                        <p class="info-label">PHONE</p>
-                        <p class="info-text" id="contactPhone"></p>
-                    </div>
-                </div>
-                <div class="info-card">
-                    <span class="info-icon">📍</span>
-                    <div class="info-content">
-                        <p class="info-label">LOCATION</p>
-                        <p class="info-text" id="contactLocation"></p>
-                    </div>
-                </div>
-                <div class="info-card">
-                    <span class="info-icon">💼</span>
-                    <div class="info-content">
-                        <p class="info-label">LINKEDIN</p>
-                        <p class="info-text"><a href="" id="contactLinkedin" target="_blank">linkedin.com/in</a></p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Right Side - Contact Form -->
-            <div class="contact-form">
-                <form onsubmit="handleSubmit(event)">
-                    <div class="form-group">
-                        <label for="name">NAME</label>
-                        <input type="text" id="name" placeholder="Your full name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">EMAIL</label>
-                        <input type="email" id="email" placeholder="your@email.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">SUBJECT</label>
-                        <input type="text" id="subject" placeholder="Job opportunity / Collaboration" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">MESSAGE</label>
-                        <textarea id="message" placeholder="Tell me about your project or opportunity..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-send">SEND MESSAGE</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Jerome Del Rosario. All rights reserved.</p>
-    </footer>
+    <noscript>
+        <p class="noscript">This portfolio needs JavaScript to draw its constellation. Reach me at delrosariomrj@gmail.com.</p>
+    </noscript>
 
     <script src="script.js"></script>
 </body>
