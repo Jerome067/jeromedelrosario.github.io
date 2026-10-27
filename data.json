@@ -6,7 +6,13 @@
     "email": "delrosariomrj@gmail.com",
     "phone": "+63 976 302 8338",
     "location": "San Juan City, Metro Manila, Philippines, 1500",
-    "github": "https://github.com/Jerome067"
+    "github": "https://github.com/Jerome067",
+    "linkedin": "https://www.linkedin.com/in/jeromedelrosario/"
+  },
+
+  "intro": {
+    "phrases": ["Software Engineer", "Architect of Digital Worlds"],
+    "status": "Initializing constellation…"
   },
   
   "about": {
@@ -119,6 +125,10 @@
       "emoji": "🧮",
       "description": "A basic calculator application demonstrating core programming concepts and arithmetic operations across multiple programming languages.",
       "variations": [
+        {
+          "language": "JavaScript (Live)",
+          "link": "calculator.html"
+        },
         {
           "language": "Python",
           "link": "calculator-python.html"
