@@ -112,10 +112,15 @@
 
   "projects": [
     {
-      "title": "Your Project Title Here",
-      "emoji": "💻",
-      "description": "Add your project description here.",
-      "tags": ["Tag1", "Tag2", "Tag3"]
+      "title": "JCover",
+      "emoji": "📄",
+      "badge": "Team project",
+      "description": "An academic cover page generator. Students fill in their course, institution and group details, pick from six templates, preview the A4 page live, and download a print-ready PDF or an editable Word file. Everything runs in the browser, so no student data ever leaves the device.",
+      "tags": ["Next.js", "React", "TypeScript", "Tailwind CSS", "jsPDF", "DOCX"],
+      "links": [
+        { "label": "Open JCover", "url": "jcover/" },
+        { "label": "Source code", "url": "https://github.com/Jerome067/jeromedelrosario.github.io/tree/main/jcover-app" }
+      ]
     }
   ],
 

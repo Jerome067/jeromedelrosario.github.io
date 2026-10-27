@@ -761,11 +761,17 @@ function renderProjects() {
     return (portfolioData.projects || []).map(project => `
         <div class="card">
             <div class="emoji" aria-hidden="true">${escapeHTML(project.emoji)}</div>
-            <h3>${escapeHTML(project.title)}</h3>
+            <h3>${escapeHTML(project.title)}${project.badge ? ` <span class="badge">${escapeHTML(project.badge)}</span>` : ''}</h3>
             <p>${escapeHTML(project.description)}</p>
             <div class="chips">
                 ${(project.tags || []).map(tag => `<span class="chip">${escapeHTML(tag)}</span>`).join('')}
             </div>
+            ${project.links ? `<div class="variation-links">
+                ${project.links.map(link => {
+                    const external = /^https?:/.test(link.url);
+                    return `<a href="${escapeHTML(link.url)}"${external ? ' target="_blank" rel="noopener"' : ''}>${escapeHTML(link.label)} ${external ? '↗' : '→'}</a>`;
+                }).join('')}
+            </div>` : ''}
         </div>
     `).join('');
 }

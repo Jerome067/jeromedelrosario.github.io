@@ -628,6 +628,19 @@ body.is-ready .hint {
     margin-top: 0;
 }
 
+.badge {
+    margin-left: 0.4rem;
+    padding: 0.1rem 0.55rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    vertical-align: middle;
+    color: var(--planet-color);
+    border: 1px solid var(--planet-color);
+}
+
 .card .emoji {
     font-size: 1.8rem;
     margin-bottom: 0.4rem;
