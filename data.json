@@ -121,6 +121,17 @@
         { "label": "Open JCover", "url": "jcover/" },
         { "label": "Source code", "url": "https://github.com/Jerome067/jeromedelrosario.github.io/tree/main/jcover-app" }
       ]
+    },
+    {
+      "title": "NutriLens",
+      "emoji": "🥗",
+      "description": "A nutrition label scanner. Snap or upload a photo of a label and NutriLens reads it on the device, explains each nutrient and ingredient in plain language, and tracks your daily intake against personal targets from your age, height, weight and activity. Includes BMI, daily streaks and a PDF report. Photos and data never leave the phone.",
+      "tags": ["JavaScript", "Tesseract.js OCR", "jsPDF", "PWA", "HTML / CSS"],
+      "links": [
+        { "label": "Open NutriLens", "url": "nutrilens/" },
+        { "label": "Sample label to scan", "url": "nutrilens/sample-label.jpg" },
+        { "label": "Source code", "url": "https://github.com/Jerome067/jeromedelrosario.github.io/tree/main/nutrilens" }
+      ]
     }
   ],
 

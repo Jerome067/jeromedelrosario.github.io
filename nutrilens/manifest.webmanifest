@@ -1,0 +1,11 @@
+{
+  "name": "NutriLens",
+  "short_name": "NutriLens",
+  "description": "Scan nutrition labels and track your daily intake.",
+  "start_url": "./#today",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f5ef",
+  "theme_color": "#3d8b68",
+  "icons": [{ "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }]
+}
